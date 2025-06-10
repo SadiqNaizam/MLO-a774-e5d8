@@ -61,13 +61,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        // New status colors
+        statusBlue: {
+          DEFAULT: 'hsl(var(--status-blue))',
+          foreground: 'hsl(var(--status-blue-foreground))'
+        },
+        statusGreen: {
+          DEFAULT: 'hsl(var(--status-green))',
+          foreground: 'hsl(var(--status-green-foreground))'
+        }
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
+				lg: 'var(--radius)', // Will use the new 0.75rem
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+      fontFamily: {
+        sans: ['var(--font-sans)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+      },
 			keyframes: {
 				'accordion-down': {
 					from: {
