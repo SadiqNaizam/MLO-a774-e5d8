@@ -4,89 +4,98 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 100%; /* White for bright feel */
+    --foreground: 222.2 84% 4.9%; /* Dark blue/black for text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 222.2 84% 4.9%; /* Dark blue/black text on card */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 222.2 84% 4.9%; /* Dark blue/black text on popover */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 45 100% 50%; /* Vibrant Yellow/Gold */
+    --primary-foreground: 45 100% 10%; /* Very Dark Brown/Black for contrast on yellow */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 96.1%; /* Light gray for secondary UI elements */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark text on light gray */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 96.1%; /* Light gray for muted text backgrounds */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Medium gray for muted text */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 100% 50%; /* Vibrant Yellow/Gold, same as primary */
+    --accent-foreground: 45 100% 10%; /* Very Dark Brown/Black, same as primary-foreground */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%; /* Red for destructive actions */
+    --destructive-foreground: 0 0% 98%; /* Light text on red */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214.3 31.8% 91.4%; /* Light gray for borders */
+    --input: 214.3 31.8% 91.4%; /* Light gray for input borders */
+    --ring: 222.2 84% 4.9%; /* Dark blue for focus ring (contrasts well with yellow/white) */
 
-    --radius: 0.5rem;
+    --radius: 0.75rem; /* 12px for softly rounded corners */
+    --font-sans: "SF Pro Display", "Avenir Next", "Roboto", "Helvetica Neue", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 
-    --sidebar-background: 0 0% 98%;
+    /* New status colors */
+    --status-blue: 210 100% 56%; /* Bright Blue */
+    --status-blue-foreground: 210 100% 97%; /* Very Light Blue/White text on status-blue */
+    --status-green: 140 60% 45%; /* Leaf Green */
+    --status-green-foreground: 140 60% 97%; /* Very Light Green/White text on status-green */
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar colors - aligned with main theme */
+    --sidebar-background: 0 0% 98%; /* Off-white */
+    --sidebar-foreground: 222.2 84% 4.9%; /* Main foreground */
+    --sidebar-primary: 45 100% 50%; /* Main primary (yellow) */
+    --sidebar-primary-foreground: 45 100% 10%; /* Main primary-foreground */
+    --sidebar-accent: 45 100% 50%; /* Main accent (yellow) */
+    --sidebar-accent-foreground: 45 100% 10%; /* Main accent-foreground */
+    --sidebar-border: 214.3 31.8% 91.4%; /* Main border */
+    --sidebar-ring: 222.2 84% 4.9%; /* Main ring */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 222.2 84% 4.9%; /* Dark blue/black */
+    --foreground: 0 0% 98%; /* Near White text */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 15% 12%; /* Slightly Lighter Dark Gray than background */
+    --card-foreground: 0 0% 98%; /* Near White text on card */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 15% 12%; /* Slightly Lighter Dark Gray */
+    --popover-foreground: 0 0% 98%; /* Near White text on popover */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 45 90% 55%; /* Brighter Yellow for dark mode */
+    --primary-foreground: 45 100% 10%; /* Very Dark Brown/Black, for contrast on yellow */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%; /* Dark gray for secondary UI */
+    --secondary-foreground: 0 0% 98%; /* Near White text on dark gray */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217.2 32.6% 17.5%; /* Dark gray for muted backgrounds */
+    --muted-foreground: 215 20.2% 65.1%; /* Lighter gray for muted text */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 90% 55%; /* Brighter Yellow, same as primary dark */
+    --accent-foreground: 45 100% 10%; /* Very Dark Brown/Black, same as primary-foreground dark */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%; /* Brighter Red for dark mode */
+    --destructive-foreground: 0 0% 98%; /* Light text on red */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 217.2 32.6% 20%; /* Slightly lighter dark gray for borders */
+    --input: 217.2 32.6% 20%; /* Slightly lighter dark gray for input borders */
+    --ring: 45 90% 60%; /* Lighter yellow for focus ring in dark mode */
+
+    /* New status colors for dark mode */
+    --status-blue: 210 100% 66%; /* Brighter Blue */
+    --status-blue-foreground: 210 100% 15%; /* Dark Blue text on status-blue (dark) */
+    --status-green: 140 55% 55%; /* Brighter Green */
+    --status-green-foreground: 140 55% 15%; /* Dark Green text on status-green (dark) */
+
+    /* Sidebar colors - aligned with main theme for dark mode */
+    --sidebar-background: 220 15% 10%; /* Darker gray, distinct from card */
+    --sidebar-foreground: 0 0% 98%; /* Main foreground (dark) */
+    --sidebar-primary: 45 90% 55%; /* Main primary (dark) */
+    --sidebar-primary-foreground: 45 100% 10%; /* Main primary-foreground (dark) */
+    --sidebar-accent: 45 90% 55%; /* Main accent (dark) */
+    --sidebar-accent-foreground: 45 100% 10%; /* Main accent-foreground (dark) */
+    --sidebar-border: 217.2 32.6% 20%; /* Main border (dark) */
+    --sidebar-ring: 45 90% 60%; /* Main ring (dark) */
   }
 }
 
@@ -97,5 +106,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans); /* Apply the new font family to the body */
   }
 }
